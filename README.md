@@ -1,12 +1,165 @@
-# React + Vite
+# 📋 React Task Manager with GitHub Integration
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React application featuring a **To-Do task manager** and **GitHub user search**, built with **Redux Toolkit**, **React Router**, and **Tailwind CSS**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
 
-## Expanding the ESLint configuration
+🔗 [View Live on Netlify](https://azeemuddintask.netlify.app/)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ Features
+
+### 🏠 Home Page
+- Central navigation to the To-Do App and GitHub Search
+
+### ✅ To-Do App
+- Add, view, and delete tasks
+- Task counter
+- State managed with Redux Toolkit
+
+### 🔍 GitHub User Search
+- Search any GitHub username
+- Display:
+  - Profile picture
+  - Username / name
+  - Bio, location
+  - Followers count
+  - Public repositories
+- Error handling for empty or invalid usernames
+
+---
+
+## 🛠 Technologies Used
+
+- ⚛️ **React 19**
+- 💨 **Tailwind CSS**
+- 🔄 **Redux Toolkit**
+- 🛣️ **React Router**
+- ⚡ **Vite** (build tool)
+- 🌐 **GitHub Users API**
+
+---
+
+## 🗂 Folder Structure
+
+A modular and scalable architecture:
+
+```
+
+src/
+│
+├── assets/                   # Static assets
+│   └── react.svg             # React logo (default Vite asset)
+│
+├── components/               # Reusable UI components
+│   ├── GitHub/
+│   │   └── GitHubCard.jsx    # Displays GitHub user profile
+│   │
+│   └── Todo/
+│       ├── TodoInput.jsx     # Input field for adding tasks
+│       └── TodoList.jsx      # Displays and manages tasks
+│
+├── features/                 # Redux slices
+│   └── todo/
+│       ├── todoSelectors.js  # Redux selectors for tasks
+│       └── todoSlice.js      # Reducer and actions for todo state
+│
+├── pages/                    # Route-level pages
+│   ├── GitHub.jsx            # GitHub search page
+│   ├── Home.jsx              # Landing page
+│   ├── NotFound.jsx          # 404 page
+│   └── Todo.jsx              # To-do app page
+│
+├── redux/                    # Redux store configuration
+│   └── store.js              # Main Redux store
+│
+├── App.jsx                   # Root component with routing
+├── index.css                 # Tailwind directives
+└── main.jsx                  # App entry point with Redux Provider
+
+````
+
+---
+
+## 🔁 Data Flow
+
+### 🧠 To-Do Feature
+- `Todo.jsx` uses:
+  - `<TodoInput />` to dispatch `addTask`
+  - `<TodoList />` to display and delete tasks
+- State is managed in `todoSlice.js`
+- Selectors in `todoSelectors.js`
+
+### 🧑‍💻 GitHub Feature
+- `GitHub.jsx` handles API requests and loading/error states
+- `GitHubCard.jsx` displays fetched user data via props
+
+---
+
+## 🧑‍💻 Local Development
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/MohdAzimuddin/Bawaja_Media_Task.git
+cd your-repo
+````
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Start the dev server
+
+```bash
+npm run dev
+```
+
+### 4. Open in browser
+
+Navigate to: [http://localhost:5173](http://localhost:5173)
+
+---
+
+## 🌍 Deployment (Netlify)
+
+Deployed via [Netlify](https://www.netlify.com/). To deploy your own version:
+
+1. Push your code to a GitHub repository
+
+2. Connect the repository to Netlify
+
+3. Set the build command to:
+
+   ```
+   npm run build
+   ```
+
+4. Set the publish directory to:
+
+   ```
+   dist
+   ```
+
+---
+
+## 📫 Contact
+
+Have questions or feedback?
+
+📧 [sfsuper2020@gmail.com](mailto:sfsuper2020@gmail.com)
+
+---
+
+## 📌 License
+
+This project is open-source and free to use.
+
+
+
+
