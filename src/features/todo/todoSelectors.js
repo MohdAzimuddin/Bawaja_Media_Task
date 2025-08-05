@@ -1,0 +1,1 @@
+export const selectTaskCount = (state) => state.todos.tasks.length;
